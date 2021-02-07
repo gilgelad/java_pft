@@ -12,10 +12,21 @@ public class MyFirstProgram {
 
     Rectangle r = new Rectangle(4, 6);
     System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
+
+    Point p1 = new Point(2.00, 5.00);
+    Point p2 = new Point(5.00, 9.00);
+
+    System.out.println("\nРасстояние между двумя точками координат будет равно следующему: \n" +
+            "Квадратный корень из (" + p2.x + " - " + p1.x + ") в квадрате плюс (" + p2.y + " - " + p1.y + ") в квадрате \n" +
+            "и будет равно " + distance(p1, p2));
   }
 
   public static void hello(String somebody) {
     System.out.println("Hello, " + somebody + "!");
+  }
+
+  public static double distance(Point p1, Point p2) {
+    return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
   }
 
 }
