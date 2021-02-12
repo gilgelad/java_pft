@@ -20,10 +20,9 @@ public class MyFirstProgram {
             "Квадратный корень из (" + p2.x + " - " + p1.x + ") в квадрате плюс (" + p2.y + " - " + p1.y + ") в квадрате \n" +
             "и будет равно " + distance(p1, p2));
 
-    //function distanse is inside of the class Point
-    Point point = new Point(2.00, 5.00);
+    //method distanse is inside of the class Point
     System.out.println("\nВычисление расстояния между двумя точками через метод внутри класса. \n" +
-            "Результат равен " + point.distance(5.00, 9.00));
+            "Результат равен " + p1.distance(p2));
   }
 
   public static void hello(String somebody) {
