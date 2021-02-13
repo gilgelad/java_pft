@@ -24,6 +24,48 @@ public class GroupCreationTests {
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
+  public void fillAddNewContactForm(NewContactData newContactData) {
+    wd.findElement(By.name("firstname")).click();
+    wd.findElement(By.name("firstname")).clear();
+    wd.findElement(By.name("firstname")).sendKeys(newContactData.getUserName());
+    wd.findElement(By.name("middlename")).click();
+    wd.findElement(By.name("middlename")).clear();
+    wd.findElement(By.name("middlename")).sendKeys(newContactData.getUserMiddleName());
+    wd.findElement(By.name("lastname")).click();
+    wd.findElement(By.name("lastname")).clear();
+    wd.findElement(By.name("lastname")).sendKeys(newContactData.getUserLastName());
+    wd.findElement(By.name("nickname")).click();
+    wd.findElement(By.name("nickname")).clear();
+    wd.findElement(By.name("nickname")).sendKeys(newContactData.getUserNickName());
+    wd.findElement(By.name("company")).click();
+    wd.findElement(By.name("company")).clear();
+    wd.findElement(By.name("company")).sendKeys(newContactData.getUserCompanyName());
+    wd.findElement(By.name("address")).click();
+    wd.findElement(By.name("address")).clear();
+    wd.findElement(By.name("address")).sendKeys(newContactData.getUserCompanyAddress());
+    wd.findElement(By.name("mobile")).click();
+    wd.findElement(By.name("mobile")).clear();
+    wd.findElement(By.name("mobile")).sendKeys(newContactData.getUserMobilePhone());
+    wd.findElement(By.name("email")).click();
+    wd.findElement(By.name("email")).clear();
+    wd.findElement(By.name("email")).sendKeys(newContactData.getUserTestEmail());
+  }
+
+  @Test
+  public void testContactCreation() throws Exception {
+    gotoContactsPageAndAddNewUser();
+    fillAddNewContactForm(new NewContactData("Иван", "Иванович", "Иванов",
+            "Happy", "Test Happy Company",
+            "РФ, г. Москва, ул.Счастливая, д. 18", "+79999999999",
+            "testmail@mail.ru"));
+    submitNewUserCreation();
+    returnToHomePage();
+  }
+
+  private void returnToHomePage() {
+    wd.findElement(By.linkText("home page")).click();
+  }
+
   @Test
   public void testGroupCreation() throws Exception {
     gotoGroupPage();
@@ -31,6 +73,10 @@ public class GroupCreationTests {
     fillGroupForm(new GroupData("test1", "test1", "test1"));
     submitGroupCreation();
     returnToGroupPage();
+  }
+
+  private void submitNewUserCreation() {
+    wd.findElement(By.name("submit")).click();
   }
 
   private void returnToGroupPage() {
@@ -59,6 +105,10 @@ public class GroupCreationTests {
 
   private void gotoGroupPage() {
     wd.findElement(By.linkText("groups")).click();
+  }
+
+  private void gotoContactsPageAndAddNewUser() {
+    wd.findElement(By.linkText("add new")).click();
   }
 
   @AfterMethod(alwaysRun = true)
