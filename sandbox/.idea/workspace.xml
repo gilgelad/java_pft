@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42865251-a9b0-437b-a4e1-5421dd43d143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContactData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -48,13 +46,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="908">
+              <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2773#2774#0" expanded="true" />
+                <element signature="e#2784#2785#0" expanded="true" />
                 <element signature="e#2951#2952#0" expanded="true" />
                 <element signature="e#2987#2988#0" expanded="true" />
                 <element signature="e#1199#1200#0" expanded="true" />
@@ -68,6 +68,15 @@
                 <element signature="e#2144#2145#0" expanded="true" />
                 <element signature="e#2199#2200#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewUserCreationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -215,8 +224,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -232,24 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests.testContactCreation">
-    <configuration name="GroupCreationTests (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.GroupCreationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.NewUserCreationTest.testContactCreation">
     <configuration name="GroupCreationTests (4)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -320,13 +312,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewUserCreationTest.testContactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.NewUserCreationTest" />
+      <option name="METHOD_NAME" value="testContactCreation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NewUserCreationTest.testContactCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testContactCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests (4)" />
-        <item itemvalue="TestNG.GroupCreationTests (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -344,14 +354,11 @@
       <workItem from="1612785649276" duration="399000" />
       <workItem from="1612822247739" duration="3923000" />
       <workItem from="1613043757649" duration="71000" />
-      <workItem from="1613156164488" duration="11419000" />
+      <workItem from="1613156164488" duration="13914000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GroupCreationTests_testGroupCreation - 2021.02.13 at 15h 20m 12s.xml">
-      <configuration name="GroupCreationTests.testGroupCreation" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="GroupCreationTests - 2021.02.13 at 15h 39m 37s.xml">
       <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
@@ -379,9 +386,12 @@
     <history-entry file="GroupCreationTests_testGroupCreation - 2021.02.13 at 23h 30m 35s.xml">
       <configuration name="GroupCreationTests.testGroupCreation" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="GroupCreationTests_testContactCreation - 2021.02.14 at 00h 20m 30s.xml">
+      <configuration name="GroupCreationTests.testContactCreation" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18513000" />
+    <option name="totallyTimeSpent" value="21008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="25" width="1440" height="805" extended-state="0" />
@@ -489,10 +499,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="908">
+          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
             <element signature="e#2951#2952#0" expanded="true" />
             <element signature="e#2987#2988#0" expanded="true" />
             <element signature="e#1199#1200#0" expanded="true" />
@@ -506,6 +518,13 @@
             <element signature="e#2144#2145#0" expanded="true" />
             <element signature="e#2199#2200#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewUserCreationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
