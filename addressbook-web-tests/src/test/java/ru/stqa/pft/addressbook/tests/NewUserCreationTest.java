@@ -8,12 +8,12 @@ public class NewUserCreationTest extends TestBase {
   @Test
   public void testContactCreation() throws Exception {
     app.getNavigationHelper().gotoContactsPageAndAddNewUser();
-    app.fillAddNewContactForm(new NewContactData("Иван", "Иванович", "Иванов",
+    app.getNewContactHelper().fillAddNewContactForm(new NewContactData("Иван", "Иванович", "Иванов",
             "Happy", "Test Happy Company",
             "РФ, г. Москва, ул.Счастливая, д. 18", "+79999999999",
             "testmail@mail.ru"));
-    app.submitNewUserCreation();
-    app.returnToHomePage();
+    app.getNewContactHelper().submitNewUserCreation();
+    app.getNavigationHelper().returnToHomePage();
   }
 }
 
