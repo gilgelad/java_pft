@@ -7,7 +7,7 @@ public class NewUserCreationTest extends TestBase {
 
   @Test
   public void testContactCreation() throws Exception {
-    app.gotoContactsPageAndAddNewUser();
+    app.getNavigationHelper().gotoContactsPageAndAddNewUser();
     app.fillAddNewContactForm(new NewContactData("Иван", "Иванович", "Иванов",
             "Happy", "Test Happy Company",
             "РФ, г. Москва, ул.Счастливая, д. 18", "+79999999999",
