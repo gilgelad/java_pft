@@ -9,8 +9,9 @@ public class HomeTaskWithAssertions {
   //Home task with assertion the distance between two points inside of the method
   @Test
   public void testDistanceMethod() {
-    Point p = new Point(2, 5);
-    Assert.assertEquals(p.distance(5, 9), 5,0);
+    Point p1 = new Point(2.00, 5.00);
+    Point p2 = new Point(5.00, 9.00);
+    Assert.assertEquals(p1.distance(p2), 5,0);
   }
 
   //Home task with assertion the distance between two points inside of the function
