@@ -2,7 +2,9 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import ru.stqa.pft.addressbook.model.NewContactData;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
@@ -10,15 +12,21 @@ public class ContactHelper extends HelperBase {
     super(wd);
   }
 
-  public void fillAddNewContactForm(NewContactData newContactData) {
-    type(By.name("firstname"), newContactData.getUserName());
-    type(By.name("middlename"),newContactData.getUserMiddleName());
-    type(By.name("lastname"), newContactData.getUserLastName());
-    type(By.name("nickname"), newContactData.getUserNickName());
-    type(By.name("company"), newContactData.getUserCompanyName());
-    type(By.name("address"), newContactData.getUserCompanyAddress());
-    type(By.name("mobile"), newContactData.getUserMobilePhone());
-    type(By.name("email"), newContactData.getUserTestEmail());
+  public void fillAddNewContactForm(ContactData contactData, boolean creation) {
+    type(By.name("firstname"), contactData.getUserName());
+    type(By.name("middlename"),contactData.getUserMiddleName());
+    type(By.name("lastname"), contactData.getUserLastName());
+    type(By.name("nickname"), contactData.getUserNickName());
+    type(By.name("company"), contactData.getUserCompanyName());
+    type(By.name("address"), contactData.getUserCompanyAddress());
+    type(By.name("mobile"), contactData.getUserMobilePhone());
+    type(By.name("email"), contactData.getUserTestEmail());
+
+    if (creation) {
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroupOfUser());
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("new_group")));
+    }
   }
 
   public void submitNewUserCreation() {
