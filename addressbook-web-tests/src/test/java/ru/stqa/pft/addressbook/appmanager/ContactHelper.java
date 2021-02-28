@@ -33,6 +33,13 @@ public class ContactHelper extends HelperBase {
     click(By.name("submit"));
   }
 
+  public void returnToHomePage() {
+    click(By.linkText("home page"));
+  }
+
+  public void gotoHomePage() {
+    click(By.linkText("home"));
+  }
 
   public void selectContact() {
     click(By.name("selected[]"));
@@ -40,6 +47,10 @@ public class ContactHelper extends HelperBase {
 
   public void initContactModification() {
     click(By.xpath("//img[@alt='Edit']"));
+  }
+
+  public void initContactCreation() {
+    click(By.linkText("add new"));
   }
 
   public void submitUserModifiction() {
@@ -53,4 +64,19 @@ public class ContactHelper extends HelperBase {
   public void confirmDeleteOperation() {
     wd.switchTo().alert().accept();
   }
+
+  public void createNewContact(ContactData contactData) {
+    initContactCreation();
+    fillAddNewContactForm(contactData, true);
+    submitNewUserCreation();
+    returnToHomePage();
+  }
+
+ //   if (wd.findElement(By.id("search_count")).getText().equals("0")) пример со значением счётчика
+
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
 }
